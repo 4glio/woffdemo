@@ -1,0 +1,40 @@
+{
+  "$schema": "https://raw.githubusercontent.com/sasjs/utils/main/src/types/sasjsconfig-schema.json",
+  "macroFolders": [
+    "sasjs/macros"
+  ],
+  "binaryFolders": [
+    "sasjs/binaryFiles"
+  ],
+  "serviceConfig": {
+    "serviceFolders": [
+      "sasjs/services/images"
+    ]
+  },
+  "streamConfig": {
+    "streamWeb": true,
+    "streamWebFolder": "web",
+    "webSourcePath": "src"
+  },
+  "defaultTarget": "sas9",
+  "targets": [
+    {
+      "name": "sas9",
+      "serverUrl": "https://sas.analytium.co.uk:8343",
+      "serverType": "SAS9",
+      "httpsAgentOptions": {
+        "allowInsecureRequests": false
+      },
+      "appLoc": "/Public/sasjs/woffdemo",
+      "macroFolders": [],
+      "programFolders": [],
+      "binaryFolders": [],
+      "deployConfig": {
+        "deployServicePack": true,
+        "deployScripts": []
+      },
+      "serverName": "SASApp",
+      "repositoryName": "Foundation"
+    }
+  ]
+}

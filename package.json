@@ -1,0 +1,40 @@
+{
+  "name": "woff-demo",
+  "version": "1.0.0",
+  "description": "Demo of deploying WOFF files as SAS Services",
+  "homepage": "https://sasapps.io",
+  "main": "index.js",
+  "scripts": {
+    "add": "sasjs add cred -t viya",
+    "deploy": "sasjs cbd -t viya",
+    "exec": "sasjs job execute jobs/extract/makedata1 -l sasjsbuild/makedata1.log -t viya",
+    "flow": "sasjs flow execute -s sasjs/jobflow.json -l sasjsbuild --csvFile sasjsbuild/results.csv -t viya",
+    "delete": "sasjs folder delete /Public/sasjs/jobs -t viya",
+    "docs": "sasjs doc",
+    "test": "sasjs test",
+    "lint": "sasjs lint",
+    "prepare": "git rev-parse --git-dir && git config core.hooksPath ./.git-hooks || true"
+  },
+  "keywords": [
+    "SAS",
+    "Viya",
+    "SASjs"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/4glio/woffdemo"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@sasjs/core": "4.4.4"
+  },
+  "devDependencies": {
+    "ghooks": "^2.0.4"
+  },
+  "config": {
+    "ghooks": {
+      "pre-commit": "sasjs lint"
+    }
+  }
+}
