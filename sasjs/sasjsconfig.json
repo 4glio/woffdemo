@@ -20,7 +20,6 @@
   "targets": [
     {
       "name": "sas9",
-      "serverUrl": "https://sas.analytium.co.uk:8343",
       "serverType": "SAS9",
       "httpsAgentOptions": {
         "allowInsecureRequests": false

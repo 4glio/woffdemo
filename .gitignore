@@ -5,3 +5,4 @@ sasjsresults/
 
 # prevent files/folders with spaces
 **\ **
+.DS_store
